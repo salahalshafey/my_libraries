@@ -29,9 +29,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (ctx) => di.sl<Services>()),
-        ChangeNotifierProvider(create: (ctx) => di.sl<ServicesGivers>()),
-        ChangeNotifierProvider(create: (ctx) => di.sl<Orders>()),
         ChangeNotifierProvider(create: (ctx) => di.sl<Chat>()),
         ChangeNotifierProvider(create: (ctx) => Account()),
       ],
