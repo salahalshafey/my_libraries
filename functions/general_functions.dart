@@ -11,7 +11,13 @@ String wellFormatedString(String str) {
           .join(' ');
 }
 
-String getFirstName(String fullName) => fullName.split(RegExp(r' +')).first;
+String firstName(String fullName) => fullName.split(RegExp(r' +')).first;
+
+String wellFormattedDateTime(DateTime date) {
+  return formatedDate(date) +
+      '\n' +
+      time24To12HoursFormat(date.hour, date.minute);
+}
 
 String time24To12HoursFormat(int hours, int minuts) {
   String minut = minuts.toString();
@@ -78,6 +84,70 @@ String formatedDuration(Duration time) {
   // print(time.toString());
   return time.toString().substring(2, 7);
 }
+
+String fromMeterPerSecToKPerH(double speed) {
+  return (speed * 3.6).toStringAsFixed(0);
+}
+
+String pastOrFutureTimeFromNow(DateTime dateTime) {
+  final duration = DateTime.now().difference(dateTime);
+
+  var d = duration.inDays ~/ 3650;
+  var res = _res(d, 'decade');
+  if (res != null) {
+    return res;
+  }
+
+  d = duration.inDays ~/ 365;
+  res = _res(d, 'year');
+  if (res != null) {
+    return res;
+  }
+
+  d = duration.inDays ~/ 30;
+  res = _res(d, 'month');
+  if (res != null) {
+    return res;
+  }
+
+  d = duration.inDays ~/ 7;
+  res = _res(d, 'week');
+  if (res != null) {
+    return res;
+  }
+
+  d = duration.inDays;
+  res = _res(d, 'day');
+  if (res != null) {
+    return res;
+  }
+
+  d = duration.inHours;
+  res = _res(d, 'hour');
+  if (res != null) {
+    return res;
+  }
+
+  d = duration.inMinutes;
+  res = _res(d, 'minute');
+  if (res != null) {
+    return res;
+  }
+
+  return 'just now';
+}
+
+String? _res(int d, String timeName) {
+  if (d > 0) {
+    return '$d $timeName${_s(d)} ago';
+  }
+  if (d < 0) {
+    return '${d.abs()} $timeName${_s(d)} from now';
+  }
+  return null;
+}
+
+String _s(int num) => num.abs() > 1 ? 's' : '';
 
 extension on String {
   Set<String> toSet() {
