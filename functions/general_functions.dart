@@ -3,9 +3,9 @@
 import 'dart:math';
 
 num getRangeRandom({
-  required double from,
-  required double to,
-  RandomType randomType = RandomType.double,
+  required num from,
+  required num to,
+  RandomType randomType = RandomType.int,
 }) {
   final doubleRandom = Random().nextDouble() * (to - from) + from;
 
@@ -20,4 +20,3 @@ enum RandomType {
   int,
   double,
 }
-
