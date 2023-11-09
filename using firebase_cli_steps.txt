@@ -1,19 +1,76 @@
-1. Download the Firebase CLI binary for Windows (standalone binary) from https://firebase.google.com/docs/cli#windows-standalone-binary
+----------------->>>>>>>>>> It is preferred to use the npm <<<<<<<<<<------------------
 
-2. move firebase-tools-instant-win.exe (the Downloaded exe file) to the root of your project for example "D:\FlutterDevelopment\projects\breast_cancer_awareness"
+
+1. to use the npm (the Node Package Manager) install the Firebase CLI from https://firebase.google.com/docs/cli#windows-npm
+
+2. open Command Prompet and run the command "npm install -g firebase-tools" to install firebase
+
+3. run the command "firebase --version" to make sure firebase installed 
+
+4. change directory to the root of your project for example         "cd D:\FlutterDevelopment\projects\breast_cancer_awareness"
+
+5. run the command "firebase login" if already loged in run "firebase login --reauth" to prevent any error to happend
+
+6. run the command "dart pub global activate flutterfire_cli" 
+
+7. run the command "flutterfire configure" and proceed to an already existing project or create a new project.
+
+8. after finish adding apps to firebase and Firebase configuration file "lib\firebase_options.dart" generated successfully do this:
+   => add firebase_options.dart to .gitignore file, add this /lib/firebase_options.dart
+   => add google-services.json to .gitignore file
+
+9. add this to the main function:
+   ```
+   import 'package:firebase_core/firebase_core.dart';
+   import 'firebase_options.dart';
+
+   // ...
+
+   await Firebase.initializeApp(
+       options: DefaultFirebaseOptions.currentPlatform,
+   );
+   ```
+
+
+
+
+
+ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+--------------->>>>>>>>>> using firebase-tools-instant-win.exe <<<<<<<<<<--------------
+
+
+1. Download the Firebase CLI binary for Windows (standalone binary) from
+   https://firebase.google.com/docs/cli#windows-standalone-binary
+
+2. move firebase-tools-instant-win.exe (the Downloaded exe file) to the root of your
+   project for example "D:\FlutterDevelopment\projects\breast_cancer_awareness"
 
 3. open firebase-tools-instant-win.exe and run the command "firebase --version"
 
-4. run the command "dart pub global activate flutterfire_cli"
-
-5. run the command "firebase login" if already loged in run "firebase login --reauth" to prevent any error to happend like:
+4. run the command "firebase login" if already loged in run "firebase login --reauth" to prevent any error to happend like:
    "i Found 0 Firebase projects.
     FirebaseCommandException: An error occured on the Firebase CLI when attempting to run a command.
     COMMAND: firebase projects:list --json
     ERROR: Failed to list Firebase projects. See firebase-debug.log for more info."
 
+5. run the command "dart pub global activate flutterfire_cli"
+
 6. run the command "flutterfire configure" and proceed to an already existing project or create a new project.
 
 7. after finish adding apps to firebase and Firebase configuration file "lib\firebase_options.dart" generated successfully do this:
-   a. add firebase_options.dart to .gitignore file, add this /lib/firebase_options.dart
-   b. add firebase-tools-instant-win.exe (the Downloaded Firebase CLI binary exe file) to .gitignore OR simply remove it.  
+   => add firebase_options.dart to .gitignore file, add this /lib/firebase_options.dart
+   => add google-services.json to .gitignore file
+   => add firebase-tools-instant-win.exe (the Downloaded Firebase CLI binary exe file) to .gitignore OR simply remove it. 
+
+8. add this to the main function:
+   ```
+   import 'package:firebase_core/firebase_core.dart';
+   import 'firebase_options.dart';
+
+   // ...
+
+   await Firebase.initializeApp(
+       options: DefaultFirebaseOptions.currentPlatform,
+   );
+   ```
