@@ -1,5 +1,5 @@
 after fininshing below if you want to add "Certificate fingerprints" to firebase:-
-  - for debug: go to "C:\Users\salah alaa\.android", and press shift with rigit click then choose "Open PowerShell window here", after open run this command "keytool -list -v -alias androiddebugkey -keystore debug.keystore", the password id "android".
+  - for debug: go to "C:\Users\salah alaa\.android", and press shift with rigit click then choose "Open PowerShell window here", after open run this command "keytool -list -v -alias androiddebugkey -keystore debug.keystore", the password is "android".
 
   - for release: go to the folder that contains the app.apk or app.aab, and press shift with rigit click then choose "Open PowerShell window here", after open run this command "keytool -printcert -jarfile app.apk" for apk OR "keytool -printcert -jarfile app.aab" for aab.
 
