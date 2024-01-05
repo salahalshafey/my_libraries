@@ -1,0 +1,85 @@
+بما ان ناس كتير دلوقتي بقت تستخدم حاجات زي chatgpt واخواتها، اهمية انك تتعلم ازاي تكتب Prompt مزبوط مهمة
+للاسف اغلب الناس فاكرة انها بتعرف تكتب prompt كويس وهي مبتعرفش، وبتشتكي من نتايج الموديل انها تعبانة عشان هي مش كاتباله صح
+مهم اوي اوي تتعلم تعمل دا عشان تطلع نتيجة قوية وتستاهل
+
+في البوست دا هقولك 3 frameworks وطرق تفكير لكتابة برومبت قوي:
+
+1- RTF framework
+دا اشهر واحد
+R - Role
+T - Task
+F - Format
+
+لما تخاطب الموديل لازم تديله ال3 عناصر دول. مثال:
+دي تمبليت تستخدمها: 
+"Act like a [insert the role you want AI to take]. Give me a [insert task] in [insert format] format."
+
+مثال:
+"Act like a life coach with 30 years of experience in mentoring. Give me a plan to improve my work-life balance in table format."
+
+هتلاقي نتيجة مختلفة تماما عن لو كتبت له بس اديني خخطة لتحسين حياتي من غير التفاصيل دي
+هتلاقوا صورة عليها رقم 1 دا نتيجة البروبمت لما اكتبه كده
+
+2- CoT - او Chain of thought، سلسلة الافكار.
+
+الموديل بيفكر احسن لما تطلب منه يشتغل خطوة خطوة
+استخدم التملبيت دي:
+"[insert your prompt instructions].
+
+Let's think through it step-by-step."
+
+مثال:
+"How do I improve my sales calls? I've only got a 15% close rate right now, and I think it's because I'm not selling the dream enough.
+
+Let's think through it step-by-step."
+
+وهنا ممكن تدمج 1 مع 2 وتعمل كده:
+
+"Act like a [insert the role you want AI to take]. Give me a [insert task] in [insert format] format."
+
+Let's think through it step-by-step."
+
+واكتشفوا كمان ان لما بتكلم الموديل بالحب والحنية بيلين :D
+يعني قول له مش بس كده، قول: Take a deep breath and let's think through it step by step
+دا بيحسن النتيجة
+
+اخر تكنيك: RISEN
+
+R - Role
+I - Instructions
+S - Steps
+E - End goal
+N - Narrowing
+
+ودا مميز جدا في المواضيع المعقدة زي المقالات والبحث
+التمبليت:
+"Role: [insert the role you want AI to take.] 
+
+Main Task: [Insert the task you want AI to complete.]
+
+Steps to complete task: [Insert numbered list of steps to follow.]
+
+Goal: [Insert goal of the output]
+
+Constraints: [Enter constraints]."
+
+مثال:
+"Role: You are an expert digital course builder who has sold millions in online courses.
+
+Main Task: Please give me a list of EVERYTHING important that I should include in my AI course and tell me all the different methods of growth I can implement to maximise revenue.
+
+Steps to complete the task:
+
+1. First start by covering all the things that ANY digital course should include. 
+
+2. Then proceed by giving your thoughts on what AI courses should include. 
+
+3. End with covering the best growth marketing tactics and strategies for digital courses.
+
+Goal: The goal is to give me a concise list of everything I should include within the course, as well as give me ideas on how I can maximize the revenue from my course. 
+
+Constraints: Maximum of 500 words. - Avoid technical jargon. - Make it actionable - Make it clear"
+
+ملحوظة: الصور دي هي النتايج، طبعا هتميزوا من نفسكم لان كل واحده توبيك مختلف
+
+المرة الجاية هكلمكم عن الcustom instructions واد ايه ممكن تحسن الوضع والنتايج
